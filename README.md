@@ -1,19 +1,58 @@
 # Ancre-toi
 
-Application Next.js réunissant le site public, l’espace apprenant et l’administration d’Ancre-toi.
+Plateforme de formation en ligne qui réunit dans une seule application Next.js le **site public**, l'**espace apprenant** et le **back-office d'administration**.
 
-## Démarrage local
+**Démo :** [ancretoi.vercel.app](https://ancretoi.vercel.app)
 
-Prérequis : Node.js, npm et une configuration locale inspirée de `.env.local.example`.
+> Ce dépôt est la copie publique d'un dépôt privé (plus de 300 commits). Les coordonnées et secrets ont été remplacés par des valeurs d'exemple.
 
-```bash
-npm install
-npm run dev
+## Fonctionnalités
+
+**Site public**
+- Catalogue de programmes, pages méthode, blog, inspirations et centre d'aide
+- Contenus administrables, metadata SEO par route
+
+**Espace apprenant**
+- Inscription, connexion (email + mot de passe, Google OAuth) et mot de passe oublié
+- Achat d'un programme via Stripe
+- Parcours jour par jour, journal personnel, bilan et plan sur 30 jours
+
+**Administration**
+- Gestion des programmes, articles, catégories, inspirations et apprenants
+
+## Stack
+
+| Domaine | Outils |
+| --- | --- |
+| Front | Next.js (App Router), React, TypeScript, Tailwind CSS, Radix UI, Motion |
+| Formulaires | React Hook Form, Zod |
+| Données | PostgreSQL (Neon), Prisma |
+| Auth | Sessions JWT (jose), bcrypt, Google OAuth |
+| Paiement / email | Stripe, Resend |
+| Qualité | ESLint, TypeScript, Playwright, axe-core |
+
+## Architecture
+
+```
+src/
+  app/         routes et metadata (groupes public / espace / administration)
+  features/    orchestrateurs de pages et UI métier
+  components/  primitives et layouts partagés
+  server/      services serveur et accès aux données (seule couche qui parle à Prisma)
+  config/      routes et navigation
+  content/     contenus statiques
+  styles/      tokens et styles globaux
+prisma/        schéma PostgreSQL et migrations
+docs/          décisions d'architecture, design system, base de données, qualité
 ```
 
-Le site est alors disponible sur [http://localhost:3000](http://localhost:3000).
+Les choix techniques sont documentés dans [`docs/architecture/DECISIONS.md`](./docs/architecture/DECISIONS.md) et le design system dans [`docs/design-system/`](./docs/design-system/).
 
-## Vérifications
+## Qualité
+
+- **Tests E2E Playwright** : parcours publics, authentification, responsive et accessibilité (axe-core)
+- **Script de contrôle d'architecture** : vérifie que Prisma n'est utilisé que dans la couche `server/`
+- **Scripts de smoke tests** sur la couche de données
 
 ```bash
 npm run lint
@@ -22,33 +61,20 @@ npm run build
 npm run test:e2e
 ```
 
-Les tests E2E lancent eux-mêmes le serveur Next.js et couvrent les principaux parcours publics, l’authentification, le responsive et l’accessibilité.
+## Lancer le projet en local
 
-## Architecture
+Prérequis : Node.js et une base PostgreSQL (Neon ou locale).
 
-- `src/app` : routes et metadata Next.js ;
-- `src/features` : orchestrateurs de pages et UI métier ;
-- `src/components` : primitives et layouts transverses ;
-- `src/server` : services serveur et accès aux données ;
-- `src/config` : routes et navigation ;
-- `src/content` : contenus statiques ;
-- `src/styles` : tokens et styles globaux ;
-- `prisma` : schéma PostgreSQL/Neon.
+```bash
+npm install
+cp .env.local.example .env.local   # puis renseigner les variables
+npx prisma migrate deploy
+npm run dev                        # http://localhost:3000
+```
 
-Les décisions durables sont documentées dans `docs/architecture/DECISIONS.md`. Les conventions de design sont dans `docs/design-system/`.
+## Ce que ce projet montre
 
-## Routes principales
-
-- public : `/`, `/programmes`, `/methode`, `/blog`, `/inspirations`, `/aide` ;
-- authentification : `/connexion`, `/inscription`, `/mot-de-passe-oublie` ;
-- apprenant : `/espace`, `/espace/formations`, `/espace/journal`, `/espace/bilan`, `/espace/plan-30-jours` ;
-- administration : `/administration`.
-
-## Données et services externes
-
-- PostgreSQL/Neon via Prisma est la source de données principale ;
-- Stripe gère le paiement ;
-- les identifiants légaux et URLs sociales de production doivent être renseignés par variables d’environnement ;
-- les analytics ne sont chargées qu’après consentement.
-
-Ne jamais ajouter de nouvelle couche MongoDB/Mongoose.
+- Concevoir un produit complet, du site vitrine au back-office
+- Structurer une application Next.js en couches claires (routes, features, server)
+- Intégrer paiement, emails et authentification
+- Documenter les décisions et tester les parcours critiques
