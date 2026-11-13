@@ -1,0 +1,118 @@
+/*
+ * Direction publique "Atelier éditorial sensoriel".
+ *
+ * Ces rôles restent volontairement sous `.public-theme` : l'espace apprenant
+ * et l'administration continuent de consommer les tokens globaux inchangés.
+ */
+.public-theme {
+  --background: #fbf7f1;
+  --foreground: #2d203b;
+  --surface: #fffdf9;
+  --surface-muted: #f3ece5;
+  --surface-raised: #fffaf4;
+  --surface-inset: #f6efe8;
+  --surface-hover: #eee5dc;
+  --surface-selected: #e9e0f2;
+  --border: #e2d8cf;
+  --input: #e9dfd7;
+  --muted-foreground: #685f70;
+  --public-paper: #fbf7f1;
+  --public-paper-deep: #efe4d8;
+  --public-plum: #4c2f55;
+  --public-sage: #607463;
+  --public-gold: #b48a3c;
+  --public-rule: rgba(76, 47, 85, 0.16);
+  --public-grid: rgba(76, 47, 85, 0.055);
+  --gutter-page: 1rem;
+  color: var(--foreground);
+}
+
+:root[data-theme="dark"] .public-theme,
+:root.dark .public-theme {
+  --background: #17131f;
+  --foreground: #f5eee8;
+  --surface: #211a29;
+  --surface-muted: #2c2333;
+  --surface-raised: #261e2f;
+  --surface-inset: #1c1723;
+  --surface-hover: #34293d;
+  --surface-selected: #3c2f4a;
+  --border: #45394c;
+  --input: #3c3144;
+  --muted-foreground: #c0b5c2;
+  --public-paper: #17131f;
+  --public-paper-deep: #251d2b;
+  --public-plum: #d4bce0;
+  --public-sage: #9db3a1;
+  --public-gold: #ddbd75;
+  --public-rule: rgba(231, 213, 236, 0.18);
+  --public-grid: rgba(231, 213, 236, 0.055);
+}
+
+.public-shell {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 8% 5%, color-mix(in srgb, var(--primary) 8%, transparent), transparent 26rem),
+    radial-gradient(circle at 92% 24%, color-mix(in srgb, var(--public-sage) 9%, transparent), transparent 30rem),
+    var(--background);
+}
+
+.public-shell::before {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  opacity: 0.42;
+  background-image: radial-gradient(var(--public-grid) 0.7px, transparent 0.7px);
+  background-size: 9px 9px;
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
+}
+
+.public-editorial-rule {
+  border-color: var(--public-rule);
+}
+
+.public-reading-copy {
+  max-width: 72ch;
+  text-wrap: pretty;
+}
+
+.public-footer {
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--public-plum) 8%, var(--surface)), transparent 58%),
+    color-mix(in srgb, var(--public-paper-deep) 58%, var(--surface));
+}
+
+@media (min-width: 48rem) {
+  .public-theme {
+    --gutter-page: 1.5rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .public-theme {
+    --gutter-page: 2rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .public-theme {
+    --gutter-page: 3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .public-theme [data-public-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+:root.reduce-motion .public-theme [data-public-reveal] {
+  opacity: 1 !important;
+  transform: none !important;
+}

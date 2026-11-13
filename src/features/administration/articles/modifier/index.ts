@@ -1,0 +1,1 @@
+export { ModifierArticlePage } from './ModifierArticlePage';

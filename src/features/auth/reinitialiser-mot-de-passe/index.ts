@@ -1,0 +1,1 @@
+export { ReinitialiserMotDePassePage } from './ReinitialiserMotDePassePage';

@@ -1,0 +1,1 @@
+export { BoussoleQuizPage } from './BoussoleQuizPage';

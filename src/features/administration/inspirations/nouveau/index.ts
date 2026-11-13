@@ -1,0 +1,1 @@
+export { NouvelleInspirationPage } from './NouvelleInspirationPage';

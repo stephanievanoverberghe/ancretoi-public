@@ -1,0 +1,1 @@
+export { InspirationsPage } from './InspirationsPage';

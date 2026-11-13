@@ -1,0 +1,9 @@
+export { ProgrammeDetailCurriculumSection } from './ProgrammeDetailCurriculumSection';
+export { ProgrammeDetailFaqSection } from './ProgrammeDetailFaqSection';
+export { ProgrammeDetailFinalCtaSection } from './ProgrammeDetailFinalCtaSection';
+export { ProgrammeDetailHeroSection } from './ProgrammeDetailHeroSection';
+export { ProgrammeDetailInsideSection } from './ProgrammeDetailInsideSection';
+export { ProgrammeDetailOutcomesSection } from './ProgrammeDetailOutcomesSection';
+export { ProgrammeDetailOverviewSection } from './ProgrammeDetailOverviewSection';
+export { ProgrammeDetailPathSection } from './ProgrammeDetailPathSection';
+export { ProgrammeDetailStickyBar } from './ProgrammeDetailStickyBar';

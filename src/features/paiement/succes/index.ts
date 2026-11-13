@@ -1,0 +1,1 @@
+export { PaiementSuccesPage } from './PaiementSuccesPage';

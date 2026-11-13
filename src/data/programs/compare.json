@@ -1,0 +1,40 @@
+{
+    "rows": [
+        {
+            "slug": "reset-7",
+            "objectif": "Revenir au calme et reprendre ton axe",
+            "duree": "7 jours",
+            "charge": "10–20 min/j",
+            "niveau": "Basique",
+            "ideal_si": "Tu veux un point de départ simple, doux et tenable",
+            "cta": "Voir RESET-7"
+        },
+        {
+            "slug": "boussole-10",
+            "objectif": "Clarifier ton cap, tes besoins et tes limites",
+            "duree": "10 jours",
+            "charge": "15–25 min/j",
+            "niveau": "Cible",
+            "ideal_si": "Tu dois choisir ou poser une limite sans te disperser",
+            "cta": "Voir BOUSSOLE-10"
+        },
+        {
+            "slug": "ancrage-30",
+            "objectif": "Stabiliser ton énergie et tes habitudes",
+            "duree": "30 jours",
+            "charge": "25–40 min/j",
+            "niveau": "Premium",
+            "ideal_si": "Tu veux une routine durable et un suivi plus profond",
+            "cta": "Voir ANCRAGE-30"
+        },
+        {
+            "slug": "alchimie-90",
+            "objectif": "Transformer en profondeur et construire une vision",
+            "duree": "90 jours",
+            "charge": "35–60 min/j",
+            "niveau": "Premium",
+            "ideal_si": "Tu cherches un chemin long, structuré et vraiment transformateur",
+            "cta": "Voir ALCHIMIE-90"
+        }
+    ]
+}

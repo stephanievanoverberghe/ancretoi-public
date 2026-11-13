@@ -1,0 +1,838 @@
+{
+    "version": "1.2",
+    "updated_at": "2026-06-28",
+    "inside": [
+        { "icon": "audio", "label": "Audios guidés" },
+        { "icon": "pdf", "label": "Fiches PDF" },
+        { "icon": "ritual", "label": "Rituels courts" },
+        { "icon": "journal", "label": "Journal intégré" },
+        { "icon": "lifetime", "label": "Accès à vie" },
+        { "icon": "refresh", "label": "Mises à jour" }
+    ],
+    "programs": [
+        {
+            "slug": "reset-7",
+            "title": "RESET-7",
+            "tagline": "7 jours pour revenir à toi, retrouver du calme et reprendre un rythme simple.",
+            "duration_days": 7,
+            "level": "Basique",
+            "status": "published",
+            "cover": "/images/programs/reset7.webp",
+            "price": {
+                "amount_cents": 3900,
+                "currency": "EUR",
+                "tax_included": true,
+                "compare_at_cents": null,
+                "stripe_price_id": null
+            },
+            "card_highlights": ["7 jours guidés", "Pratiques courtes", "Journal intégré"],
+            "detail": {
+                "overview": {
+                    "eyebrow": "Avant de choisir",
+                    "title": "Est-ce que RESET-7 est fait pour toi ?",
+                    "description": "Un point de départ court pour retrouver du calme, reprendre ton axe et tester une pratique guidée sans te surcharger.",
+                    "who_title": "À qui ça s’adresse",
+                    "cards": [
+                        {
+                            "kind": "fit",
+                            "title": "Tu es au bon endroit si",
+                            "description": "Le parcours répond à une phase de dispersion, de tension ou de reprise.",
+                            "items": [
+                                "Tu as besoin d’un cadre simple pour revenir à toi.",
+                                "Tu veux reprendre doucement sans te rajouter une pression.",
+                                "Tu préfères commencer par un format court et guidé."
+                            ]
+                        },
+                        {
+                            "kind": "goals",
+                            "title": "Tu vas travailler",
+                            "description": "Les objectifs restent concrets pour sentir rapidement si le format te correspond.",
+                            "items": [
+                                "Clarifier une intention prioritaire.",
+                                "Apaiser le corps et le mental avec des pratiques courtes.",
+                                "Créer un rituel réaliste que tu peux reprendre."
+                            ]
+                        },
+                        {
+                            "kind": "includes",
+                            "title": "Tu débloques",
+                            "description": "Après achat, le parcours s’ouvre dans ton espace apprenant.",
+                            "items": [
+                                "7 journées guidées.",
+                                "Un journal intégré pour garder une trace.",
+                                "Un bilan final pour choisir la suite."
+                            ]
+                        }
+                    ],
+                    "note": {
+                        "title": "Tu peux commencer même si tu n’es pas prête à 100 %.",
+                        "description": "RESET-7 sert justement à créer un premier cadre clair, progressif et facile à reprendre.",
+                        "cta_label": "Voir l’accès"
+                    }
+                },
+                "inside": {
+                    "eyebrow": "Dans RESET-7",
+                    "title": "Un parcours court, clair et prêt à suivre.",
+                    "description": "RESET-7 rassemble l’essentiel pour pratiquer sans chercher quoi faire ensuite : une journée, une intention, une pratique et une trace.",
+                    "items": [
+                        {
+                            "kind": "steps",
+                            "title": "Espace guidé",
+                            "description": "Tout est regroupé au même endroit pour suivre le parcours sans chercher les supports."
+                        },
+                        {
+                            "kind": "practice",
+                            "title": "Pratiques courtes",
+                            "description": "Les exercices sont pensés pour rester tenables, même quand l’énergie est basse."
+                        },
+                        {
+                            "kind": "journal",
+                            "title": "Journal intégré",
+                            "description": "Tu peux noter ton état, tes décisions et ce que tu veux garder du parcours."
+                        },
+                        {
+                            "kind": "review",
+                            "title": "Bilan final",
+                            "description": "La fin du programme sert à voir ce qui a changé et à choisir le prochain pas."
+                        }
+                    ]
+                },
+                "path": {
+                    "eyebrow": "Déroulé",
+                    "title": "7 jours pour revenir au calme, sans te disperser.",
+                    "description": "RESET-7 avance en trois temps simples : poser le cadre, pratiquer sans surcharge, puis garder les repères utiles.",
+                    "summary": [
+                        { "kind": "duration", "label": "Durée", "value": "7 jours" },
+                        { "kind": "load", "label": "Charge", "value": "10–20 min/j" },
+                        { "kind": "rhythm", "label": "Rythme", "value": "Reprise simple si tu fais une pause" }
+                    ],
+                    "steps": [
+                        {
+                            "label": "Jours 1-2",
+                            "title": "Entrer dans le cadre",
+                            "description": "Tu poses une intention claire, tu reviens au corps et tu installes un premier rythme praticable.",
+                            "focus": "Se recentrer"
+                        },
+                        {
+                            "label": "Jours 3-5",
+                            "title": "Pratiquer sans te surcharger",
+                            "description": "Tu avances avec des exercices courts pour clarifier, respirer, poser une limite et garder une trace.",
+                            "focus": "Pratiquer"
+                        },
+                        {
+                            "label": "Jours 6-7",
+                            "title": "Intégrer et choisir la suite",
+                            "description": "Tu fais le point sur ce qui a bougé, ce que tu gardes et le prochain pas le plus réaliste.",
+                            "focus": "Intégrer"
+                        }
+                    ]
+                },
+                "who": "Pour celles qui sentent qu’elles se dispersent, se tendent ou repoussent toujours le moment de se remettre au centre.",
+                "goals": [
+                    "Revenir à une intention claire et réaliste pour la semaine.",
+                    "Installer un rituel court que tu peux tenir même avec peu d’énergie.",
+                    "Apaiser le mental et le corps avec des pratiques simples.",
+                    "Retrouver une base stable avant de repartir plus loin."
+                ],
+                "includes": [
+                    "7 journées de pratique guidée dans l’espace apprenant.",
+                    "Des exercices courts pour respirer, clarifier, poser une limite et intégrer.",
+                    "Un journal intégré pour garder une trace de ton état, de tes décisions et de tes prises de conscience.",
+                    "Un bilan final pour comprendre ce qui a changé et choisir la suite."
+                ],
+                "prerequisites": [
+                    "Aucun prérequis.",
+                    "Prévoir un créneau court chaque jour, même imparfait.",
+                    "Avancer avec douceur : le programme n’est pas une performance à réussir."
+                ],
+                "outcomes": [
+                    "Un quotidien plus calme, plus lisible et moins dispersé.",
+                    "Une intention prioritaire que tu peux vraiment tenir.",
+                    "Des repères simples pour te recentrer quand tu décroches.",
+                    "Une première base solide pour continuer vers un parcours plus long."
+                ],
+                "outcomes_section": {
+                    "eyebrow": "Résultats",
+                    "title": "Ce qui peut devenir plus simple après RESET-7.",
+                    "description": "RESET-7 ne promet pas de tout régler en une semaine. Il aide surtout à remettre de la clarté, du calme et des repères praticables.",
+                    "items": [
+                        {
+                            "title": "Plus de calme au quotidien",
+                            "description": "Tu repars avec des pratiques courtes pour revenir au corps et réduire la dispersion."
+                        },
+                        {
+                            "title": "Une intention plus nette",
+                            "description": "Tu identifies ce qui compte maintenant, sans multiplier les objectifs."
+                        },
+                        {
+                            "title": "Des repères réutilisables",
+                            "description": "Tu gardes des points d’appui simples pour te recentrer quand tu décroches."
+                        },
+                        {
+                            "title": "Une première base pour continuer",
+                            "description": "Le parcours pose un socle doux avant d’aller vers un programme plus long."
+                        }
+                    ],
+                    "note": "Ce programme soutient une pratique personnelle. Il ne remplace pas un accompagnement médical, psychologique ou thérapeutique si tu en as besoin."
+                },
+                "faq_section": {
+                    "eyebrow": "Questions fréquentes",
+                    "title": "Avant de commencer RESET-7",
+                    "description": "Les réponses utiles pour savoir si ce format court correspond à ton rythme et à ton besoin du moment."
+                },
+                "faq": [
+                    {
+                        "q": "Combien de temps prévoir chaque jour ?",
+                        "a": "En moyenne 10 à 20 minutes. L’objectif est de rester tenable, pas de te rajouter une charge."
+                    },
+                    {
+                        "q": "Est-ce que je peux commencer si je suis fatiguée ?",
+                        "a": "Oui. RESET-7 est justement pensé comme un point d’entrée doux, simple et progressif."
+                    },
+                    {
+                        "q": "Qu’est-ce qui se passe après l’achat ?",
+                        "a": "Ton accès s’ouvre dans l’espace apprenant avec les journées, le journal et les ressources liées au parcours."
+                    }
+                ],
+                "final_cta": {
+                    "eyebrow": "Prochaine étape",
+                    "title": "Tu veux commencer RESET-7 ?",
+                    "description": "Tu peux ouvrir ton accès maintenant ou comparer les autres parcours si tu veux confirmer ton choix.",
+                    "purchase_label": "Acheter RESET-7",
+                    "free_label": "Commencer gratuitement",
+                    "unavailable_label": "Me prévenir",
+                    "secondary_label": "Comparer les programmes",
+                    "aside_title": "Le bon parcours est celui que tu peux vraiment suivre.",
+                    "aside_items": ["Choisir un rythme réaliste", "Avancer étape par étape", "Retrouver ton espace après achat"]
+                }
+            }
+        },
+        {
+            "slug": "boussole-10",
+            "title": "BOUSSOLE-10",
+            "tagline": "10 jours pour clarifier ton cap, tes besoins et tes limites sans te perdre.",
+            "duration_days": 10,
+            "level": "Cible",
+            "status": "published",
+            "cover": "/images/programs/boussole10.webp",
+            "price": {
+                "amount_cents": 5900,
+                "currency": "EUR",
+                "tax_included": true,
+                "compare_at_cents": null,
+                "stripe_price_id": null
+            },
+            "card_highlights": ["Cap personnel", "Valeurs et besoins", "Limites saines"],
+            "detail": {
+                "overview": {
+                    "eyebrow": "Avant de choisir",
+                    "title": "Est-ce que BOUSSOLE-10 est le bon parcours maintenant ?",
+                    "description": "Un format pensé pour transformer un flou intérieur en cap lisible, avec des repères sur tes valeurs, tes besoins et tes limites.",
+                    "who_title": "À qui ça s’adresse",
+                    "cards": [
+                        {
+                            "kind": "fit",
+                            "title": "Tu es au bon endroit si",
+                            "description": "Le parcours part d’une situation où tu as besoin de choisir ou de te repositionner.",
+                            "items": [
+                                "Tu tournes en boucle autour d’une décision.",
+                                "Tu sens qu’une limite doit être clarifiée.",
+                                "Tu veux retrouver une direction sans tout analyser pendant des semaines."
+                            ]
+                        },
+                        {
+                            "kind": "goals",
+                            "title": "Tu vas travailler",
+                            "description": "Le programme aide à mettre des mots sur ce qui compte vraiment.",
+                            "items": [
+                                "Identifier tes valeurs-boussole.",
+                                "Repérer les besoins derrière tes tensions.",
+                                "Préparer une limite ou une demande plus calme."
+                            ]
+                        },
+                        {
+                            "kind": "includes",
+                            "title": "Tu débloques",
+                            "description": "L’accès regroupe les exercices, les repères et le journal au même endroit.",
+                            "items": [
+                                "10 journées de clarification guidée.",
+                                "Des exercices valeurs, besoins et limites.",
+                                "Un journal pour formuler tes décisions."
+                            ]
+                        }
+                    ],
+                    "note": {
+                        "title": "Tu n’as pas besoin d’avoir déjà la réponse.",
+                        "description": "BOUSSOLE-10 sert à construire une direction suffisamment claire pour avancer, même si tout n’est pas figé.",
+                        "cta_label": "Voir l’accès"
+                    }
+                },
+                "inside": {
+                    "eyebrow": "Dans BOUSSOLE-10",
+                    "title": "Un cadre pour sortir du flou sans forcer une réponse.",
+                    "description": "BOUSSOLE-10 t’aide à mettre de l’ordre dans ce qui compte, ce qui fatigue et ce qui doit être clarifié.",
+                    "items": [
+                        {
+                            "kind": "direction",
+                            "title": "Carte de clarté",
+                            "description": "Tes valeurs, besoins, limites et décisions prennent forme dans un espace de travail dédié."
+                        },
+                        {
+                            "kind": "practice",
+                            "title": "Ateliers valeurs et besoins",
+                            "description": "Les exercices t’aident à repérer ce qui compte vraiment derrière les tensions."
+                        },
+                        {
+                            "kind": "journal",
+                            "title": "Journal de décision",
+                            "description": "Tu poses tes mots, tes limites et tes pistes d’action dans un espace dédié."
+                        },
+                        {
+                            "kind": "access",
+                            "title": "Formulations de limites",
+                            "description": "Le parcours prépare des formulations plus calmes pour te repositionner."
+                        }
+                    ]
+                },
+                "path": {
+                    "eyebrow": "Déroulé",
+                    "title": "10 jours pour transformer le flou en direction lisible.",
+                    "description": "BOUSSOLE-10 suit une progression courte : observer, clarifier, formuler, puis passer à une décision plus calme.",
+                    "summary": [
+                        { "kind": "duration", "label": "Durée", "value": "10 jours" },
+                        { "kind": "load", "label": "Charge", "value": "15–25 min/j" },
+                        { "kind": "rhythm", "label": "Rythme", "value": "Un cap à construire sans urgence" }
+                    ],
+                    "steps": [
+                        {
+                            "label": "Jours 1-2",
+                            "title": "Observer ce qui tire dans tous les sens",
+                            "description": "Tu identifies les zones de flou, les tensions récurrentes et les questions qui demandent de l’attention.",
+                            "focus": "Observer"
+                        },
+                        {
+                            "label": "Jours 3-5",
+                            "title": "Clarifier tes valeurs et tes besoins",
+                            "description": "Tu fais émerger ce qui compte vraiment derrière les choix, les peurs et les compromis.",
+                            "focus": "Clarifier"
+                        },
+                        {
+                            "label": "Jours 6-8",
+                            "title": "Poser une limite ou une direction",
+                            "description": "Tu transformes tes repères en formulation plus claire, plus calme et plus actionnable.",
+                            "focus": "Formuler"
+                        },
+                        {
+                            "label": "Jours 9-10",
+                            "title": "Choisir le prochain pas",
+                            "description": "Tu repars avec un cap réaliste et une action simple pour ne pas rester dans l’analyse.",
+                            "focus": "Décider"
+                        }
+                    ]
+                },
+                "who": "Pour celles qui savent qu’elles doivent choisir, poser une limite ou reprendre une direction, mais qui tournent en boucle dans le flou.",
+                "goals": [
+                    "Identifier ce qui compte vraiment pour toi maintenant.",
+                    "Transformer un flou intérieur en cap provisoire et actionnable.",
+                    "Repérer les besoins qui reviennent derrière tes tensions.",
+                    "Préparer une limite saine sans culpabilité excessive."
+                ],
+                "includes": [
+                    "10 journées guidées pour passer du flou à une direction plus claire.",
+                    "Des exercices d’auto-enquête pour valeurs, besoins, limites et cap.",
+                    "Un journal de bord pour formuler tes décisions avec tes mots.",
+                    "Des repères concrets pour poser une limite ou préparer une conversation."
+                ],
+                "prerequisites": [
+                    "Aucun prérequis obligatoire.",
+                    "RESET-7 peut aider si tu as besoin de te recentrer avant de décider.",
+                    "Venir avec une situation ou une décision qui demande plus de clarté."
+                ],
+                "outcomes": [
+                    "Un cap plus net pour les prochaines semaines.",
+                    "Trois valeurs-boussole à utiliser dans tes choix.",
+                    "Une limite ou une demande formulée de manière plus calme.",
+                    "Moins de dispersion face aux décisions importantes."
+                ],
+                "outcomes_section": {
+                    "eyebrow": "Résultats",
+                    "title": "Ce que BOUSSOLE-10 aide à clarifier.",
+                    "description": "Le parcours vise une direction plus lisible, pas une réponse parfaite. Tu avances avec des repères assez clairs pour décider plus calmement.",
+                    "items": [
+                        {
+                            "title": "Un cap plus net",
+                            "description": "Tu comprends mieux ce que tu veux préserver, choisir ou arrêter de porter."
+                        },
+                        {
+                            "title": "Des valeurs-boussole",
+                            "description": "Tu repars avec des repères concrets pour trier tes choix."
+                        },
+                        {
+                            "title": "Une limite formulée",
+                            "description": "Tu peux préparer une demande ou une limite avec plus de calme et moins de culpabilité."
+                        },
+                        {
+                            "title": "Moins de dispersion mentale",
+                            "description": "Le flou devient plus lisible, ce qui rend le prochain pas plus simple."
+                        }
+                    ],
+                    "note": "Ce programme accompagne la clarification personnelle. Il ne remplace pas un suivi professionnel si ta situation demande un soutien spécifique."
+                },
+                "faq_section": {
+                    "eyebrow": "Questions fréquentes",
+                    "title": "Avant de choisir BOUSSOLE-10",
+                    "description": "Les repères essentiels pour comprendre le rythme, le niveau d’engagement et la place de ce parcours dans ta progression."
+                },
+                "faq": [
+                    {
+                        "q": "Est-ce que BOUSSOLE-10 remplace RESET-7 ?",
+                        "a": "Non. RESET-7 sert à revenir au centre ; BOUSSOLE-10 sert surtout à clarifier une direction et des limites."
+                    },
+                    {
+                        "q": "Je ne sais pas encore quelle décision travailler.",
+                        "a": "Tu peux commencer avec une zone de flou. Le parcours aide justement à la préciser au fil des exercices."
+                    },
+                    {
+                        "q": "Est-ce que je vais devoir confronter quelqu’un ?",
+                        "a": "Non. Le programme t’aide à préparer une limite ou une demande, mais tu gardes toujours le choix du rythme et du moment."
+                    }
+                ],
+                "final_cta": {
+                    "eyebrow": "Prochaine étape",
+                    "title": "Tu veux clarifier ton cap avec BOUSSOLE-10 ?",
+                    "description": "Tu peux ouvrir ton accès maintenant ou revenir au comparatif si tu veux vérifier que ce parcours correspond au moment présent.",
+                    "purchase_label": "Acheter BOUSSOLE-10",
+                    "free_label": "Commencer gratuitement",
+                    "unavailable_label": "Me prévenir",
+                    "secondary_label": "Comparer les programmes",
+                    "aside_title": "Avancer devient plus simple quand le cap est clair.",
+                    "aside_items": ["Clarifier tes priorités", "Formuler une limite", "Retrouver ton espace après achat"]
+                }
+            }
+        },
+        {
+            "slug": "ancrage-30",
+            "title": "ANCRAGE-30",
+            "tagline": "30 jours pour stabiliser ton énergie, tes habitudes et ton ancrage intérieur.",
+            "duration_days": 30,
+            "level": "Premium",
+            "status": "draft",
+            "cover": "/images/programs/ancrage30.webp",
+            "price": {
+                "amount_cents": null,
+                "currency": "EUR",
+                "tax_included": true,
+                "compare_at_cents": null,
+                "stripe_price_id": null
+            },
+            "card_highlights": ["Routine durable", "Bilans hebdomadaires", "Plan d’action 30 jours"],
+            "detail": {
+                "overview": {
+                    "eyebrow": "Avant de choisir",
+                    "title": "Est-ce que ANCRAGE-30 correspond à ton besoin de stabilité ?",
+                    "description": "Un parcours plus long pour arrêter l’effet yo-yo, installer des habitudes réalistes et suivre ton énergie avec régularité.",
+                    "who_title": "À qui ça s’adresse",
+                    "cards": [
+                        {
+                            "kind": "fit",
+                            "title": "Tu es au bon endroit si",
+                            "description": "Le parcours s’adresse aux personnes qui veulent consolider plutôt que recommencer.",
+                            "items": [
+                                "Tu comprends tes schémas mais tu peines à stabiliser.",
+                                "Tu veux un rythme de pratique plus durable.",
+                                "Tu as besoin d’un suivi progressif sur plusieurs semaines."
+                            ]
+                        },
+                        {
+                            "kind": "goals",
+                            "title": "Tu vas travailler",
+                            "description": "L’objectif est d’ancrer ce que tu sais déjà dans un quotidien plus stable.",
+                            "items": [
+                                "Créer une routine qui respecte ton énergie.",
+                                "Renforcer tes bases corps, mental et émotions.",
+                                "Transformer des prises de conscience en habitudes."
+                            ]
+                        },
+                        {
+                            "kind": "includes",
+                            "title": "Tu débloques",
+                            "description": "Le parcours donne une structure plus profonde que les formats courts.",
+                            "items": [
+                                "30 journées de pratique guidée.",
+                                "Des bilans hebdomadaires.",
+                                "Un plan d’action pour continuer après le programme."
+                            ]
+                        }
+                    ],
+                    "note": {
+                        "title": "Le but n’est pas de tout réussir parfaitement.",
+                        "description": "ANCRAGE-30 est pensé pour construire une continuité réaliste, avec des reprises possibles quand le rythme bouge.",
+                        "cta_label": "Voir l’accès"
+                    }
+                },
+                "inside": {
+                    "eyebrow": "Dans ANCRAGE-30",
+                    "title": "Un mois pour stabiliser ce que tu veux vraiment garder.",
+                    "description": "ANCRAGE-30 approfondit le suivi avec une routine, des bilans et des repères pour éviter de repartir de zéro.",
+                    "items": [
+                        {
+                            "kind": "steps",
+                            "title": "Tableau de stabilisation",
+                            "description": "Le parcours regroupe tes repères, tes pratiques et tes bilans pour suivre ce qui tient vraiment."
+                        },
+                        {
+                            "kind": "practice",
+                            "title": "Tracker d’habitudes",
+                            "description": "Tu travailles des pratiques concrètes pour soutenir ton énergie au quotidien."
+                        },
+                        {
+                            "kind": "review",
+                            "title": "Bilans hebdomadaires",
+                            "description": "Des points réguliers t’aident à ajuster le rythme avant de décrocher."
+                        },
+                        {
+                            "kind": "resources",
+                            "title": "Plan d’action",
+                            "description": "Tu repars avec une structure pour prolonger ce qui fonctionne après le parcours."
+                        }
+                    ]
+                },
+                "path": {
+                    "eyebrow": "Déroulé",
+                    "title": "30 jours pour installer une stabilité qui tient dans le quotidien.",
+                    "description": "ANCRAGE-30 avance par cycles hebdomadaires pour créer une routine, suivre ton énergie et ajuster avant de décrocher.",
+                    "summary": [
+                        { "kind": "duration", "label": "Durée", "value": "30 jours" },
+                        { "kind": "load", "label": "Charge", "value": "20–35 min/j" },
+                        { "kind": "rhythm", "label": "Rythme", "value": "Bilans hebdomadaires et reprise souple" }
+                    ],
+                    "steps": [
+                        {
+                            "label": "Semaine 1",
+                            "title": "Reposer les bases",
+                            "description": "Tu observes ton énergie, tes points de fuite et ce qui doit être simplifié pour tenir dans la durée.",
+                            "focus": "Stabiliser"
+                        },
+                        {
+                            "label": "Semaine 2",
+                            "title": "Installer les habitudes piliers",
+                            "description": "Tu choisis peu de pratiques, mais assez solides pour soutenir ton quotidien sans créer une nouvelle pression.",
+                            "focus": "Installer"
+                        },
+                        {
+                            "label": "Semaine 3",
+                            "title": "Ajuster quand le réel revient",
+                            "description": "Tu apprends à reprendre après une pause, réduire la charge et garder le fil même quand la semaine bouge.",
+                            "focus": "Ajuster"
+                        },
+                        {
+                            "label": "Semaine 4",
+                            "title": "Consolider ton rythme",
+                            "description": "Tu relies tes pratiques à des repères concrets pour sentir ce qui soutient vraiment ton ancrage.",
+                            "focus": "Consolider"
+                        },
+                        {
+                            "label": "Bilan",
+                            "title": "Préparer la suite",
+                            "description": "Tu gardes les habitudes utiles, tu laisses le reste et tu construis un plan simple pour continuer.",
+                            "focus": "Continuer"
+                        }
+                    ]
+                },
+                "who": "Pour celles qui ont déjà compris beaucoup de choses, mais qui veulent maintenant stabiliser leur énergie et arrêter l’effet yo-yo.",
+                "goals": [
+                    "Créer une routine réaliste qui respecte ton énergie.",
+                    "Renforcer tes bases corps, mental, émotions et action.",
+                    "Transformer les prises de conscience en habitudes concrètes.",
+                    "Installer un rythme de suivi hebdomadaire sans pression."
+                ],
+                "includes": [
+                    "30 journées structurées pour ancrer une progression durable.",
+                    "Des pratiques courtes, des bilans hebdomadaires et des points d’ajustement.",
+                    "Des supports pour suivre ton énergie, tes habitudes et tes décisions.",
+                    "Un plan d’action pour garder le cap après le programme."
+                ],
+                "prerequisites": [
+                    "Avoir déjà une première base de recentrage.",
+                    "RESET-7 est recommandé si tu repars de très loin.",
+                    "Être prête à avancer progressivement plutôt qu’à tout changer d’un coup."
+                ],
+                "outcomes": [
+                    "Une routine plus stable et plus réaliste.",
+                    "Une meilleure lecture de ton énergie et de tes limites.",
+                    "Des habitudes piliers qui soutiennent ton quotidien.",
+                    "Un sentiment plus clair de continuité et de maîtrise douce."
+                ],
+                "outcomes_section": {
+                    "eyebrow": "Résultats",
+                    "title": "Ce que ANCRAGE-30 cherche à stabiliser.",
+                    "description": "ANCRAGE-30 travaille la continuité : moins de yo-yo, plus de repères, et une routine suffisamment réaliste pour durer.",
+                    "items": [
+                        {
+                            "title": "Une routine plus stable",
+                            "description": "Tu construis un rythme qui respecte ton énergie plutôt qu’un idéal impossible à tenir."
+                        },
+                        {
+                            "title": "Une meilleure lecture de tes limites",
+                            "description": "Tu repères plus vite ce qui te soutient, ce qui te surcharge et ce qui doit être ajusté."
+                        },
+                        {
+                            "title": "Des habitudes piliers",
+                            "description": "Tu gardes quelques pratiques simples qui peuvent soutenir ton quotidien."
+                        },
+                        {
+                            "title": "Une continuité plus douce",
+                            "description": "Tu apprends à reprendre sans repartir de zéro à chaque pause."
+                        }
+                    ],
+                    "note": "Ce programme soutient l’ancrage personnel et les habitudes. Il ne remplace pas un accompagnement médical ou thérapeutique si tu en as besoin."
+                },
+                "faq_section": {
+                    "eyebrow": "Questions fréquentes",
+                    "title": "Avant d’entrer dans ANCRAGE-30",
+                    "description": "Les réponses importantes pour te projeter dans un parcours plus long, progressif et pensé pour tenir dans le quotidien."
+                },
+                "faq": [
+                    {
+                        "q": "Est-ce grave si je manque une journée ?",
+                        "a": "Non. Le parcours est pensé pour reprendre simplement, sans repartir à zéro ni culpabiliser."
+                    },
+                    {
+                        "q": "Est-ce que c’est plus intense que RESET-7 ?",
+                        "a": "Oui, la durée est plus longue et l’intégration plus profonde, mais le rythme reste progressif."
+                    },
+                    {
+                        "q": "Quand sera-t-il disponible ?",
+                        "a": "ANCRAGE-30 est prévu comme parcours de stabilisation après les premiers programmes publiés."
+                    }
+                ],
+                "final_cta": {
+                    "eyebrow": "Prochaine étape",
+                    "title": "Tu veux être prévenue pour ANCRAGE-30 ?",
+                    "description": "Ce parcours est pensé pour stabiliser dans la durée. Tu peux demander à être prévenue ou comparer les formats disponibles maintenant.",
+                    "purchase_label": "Acheter ANCRAGE-30",
+                    "free_label": "Commencer gratuitement",
+                    "unavailable_label": "Me prévenir",
+                    "secondary_label": "Comparer les programmes",
+                    "aside_title": "Un parcours long gagne à respecter ton rythme réel.",
+                    "aside_items": ["Préparer une routine tenable", "Stabiliser sans pression", "Choisir le bon moment"]
+                }
+            }
+        },
+        {
+            "slug": "alchimie-90",
+            "title": "ALCHIMIE-90",
+            "tagline": "90 jours pour traverser une transformation profonde avec un cadre solide.",
+            "duration_days": 90,
+            "level": "Premium",
+            "status": "draft",
+            "cover": "/images/programs/alchimie90.webp",
+            "price": {
+                "amount_cents": null,
+                "currency": "EUR",
+                "tax_included": true,
+                "compare_at_cents": null,
+                "stripe_price_id": null
+            },
+            "card_highlights": ["Chemin complet", "Vision 12 mois", "Intégration profonde"],
+            "detail": {
+                "overview": {
+                    "eyebrow": "Avant de choisir",
+                    "title": "Est-ce que ALCHIMIE-90 est le bon engagement ?",
+                    "description": "Un parcours long pour traverser une transformation profonde, relier introspection et action, puis construire une vision plus incarnée.",
+                    "who_title": "À qui ça s’adresse",
+                    "cards": [
+                        {
+                            "kind": "fit",
+                            "title": "Tu es au bon endroit si",
+                            "description": "Le parcours demande un engagement plus profond qu’un format de recentrage.",
+                            "items": [
+                                "Tu veux travailler sur des schémas qui reviennent souvent.",
+                                "Tu cherches un cadre long plutôt qu’un déclic rapide.",
+                                "Tu veux relier vision, choix et passage à l’action."
+                            ]
+                        },
+                        {
+                            "kind": "goals",
+                            "title": "Tu vas travailler",
+                            "description": "Le programme accompagne une transformation progressive et structurée.",
+                            "items": [
+                                "Comprendre les blocages récurrents sans les contourner.",
+                                "Clarifier une vision alignée pour les prochains mois.",
+                                "Transformer l’introspection en décisions concrètes."
+                            ]
+                        },
+                        {
+                            "kind": "includes",
+                            "title": "Tu débloques",
+                            "description": "Le parcours est pensé comme un chemin complet avec suivi et intégration.",
+                            "items": [
+                                "90 jours structurés en grandes étapes.",
+                                "Des bilans réguliers pour ajuster le cap.",
+                                "Un journal de transformation pour garder la mémoire du chemin."
+                            ]
+                        }
+                    ],
+                    "note": {
+                        "title": "Ce n’est pas une solution rapide.",
+                        "description": "ALCHIMIE-90 s’adresse à un vrai temps de transformation, avec un cadre solide et progressif.",
+                        "cta_label": "Voir l’accès"
+                    }
+                },
+                "inside": {
+                    "eyebrow": "Dans ALCHIMIE-90",
+                    "title": "Un chemin long pour transformer avec profondeur.",
+                    "description": "ALCHIMIE-90 relie introspection, régulation, vision et passage à l’action dans un cadre plus complet.",
+                    "items": [
+                        {
+                            "kind": "steps",
+                            "title": "Espace de transformation",
+                            "description": "Les pratiques, bilans, visions et traces du chemin restent reliés dans un même cadre."
+                        },
+                        {
+                            "kind": "integration",
+                            "title": "Exercices d’intégration",
+                            "description": "Tu travailles ce qui revient souvent, avec plus de temps pour comprendre et ajuster."
+                        },
+                        {
+                            "kind": "direction",
+                            "title": "Vision 12 mois",
+                            "description": "Le programme aide à relier ce que tu comprends à ce que tu veux construire."
+                        },
+                        {
+                            "kind": "journal",
+                            "title": "Journal de transformation",
+                            "description": "Tu gardes la mémoire du chemin, des choix posés et des bascules vécues."
+                        }
+                    ]
+                },
+                "path": {
+                    "eyebrow": "Déroulé",
+                    "title": "90 jours pour traverser une transformation en plusieurs actes.",
+                    "description": "ALCHIMIE-90 suit un chemin plus long : stabiliser, comprendre, transformer, agir, puis intégrer dans une vision durable.",
+                    "summary": [
+                        { "kind": "duration", "label": "Durée", "value": "90 jours" },
+                        { "kind": "load", "label": "Charge", "value": "30–45 min/j" },
+                        { "kind": "rhythm", "label": "Rythme", "value": "Phases longues, bilans et intégration" }
+                    ],
+                    "steps": [
+                        {
+                            "label": "Acte 1",
+                            "title": "Stabiliser la base",
+                            "description": "Tu crées un cadre assez solide pour traverser le parcours sans te perdre dans l’intensité.",
+                            "focus": "Stabiliser"
+                        },
+                        {
+                            "label": "Acte 2",
+                            "title": "Observer les schémas",
+                            "description": "Tu repères ce qui revient souvent, ce qui te protège encore et ce qui demande une autre réponse.",
+                            "focus": "Observer"
+                        },
+                        {
+                            "label": "Acte 3",
+                            "title": "Transformer la relation à toi",
+                            "description": "Tu travailles les choix, les récits et les habitudes qui structurent ta manière d’avancer.",
+                            "focus": "Transformer"
+                        },
+                        {
+                            "label": "Acte 4",
+                            "title": "Mettre en mouvement",
+                            "description": "Tu relies les prises de conscience à des décisions, des actions et des limites plus incarnées.",
+                            "focus": "Agir"
+                        },
+                        {
+                            "label": "Acte 5",
+                            "title": "Construire une vision",
+                            "description": "Tu clarifies ce que tu veux nourrir dans les prochains mois, sans repartir dans une performance.",
+                            "focus": "Projeter"
+                        },
+                        {
+                            "label": "Intégration",
+                            "title": "Garder ce qui transforme vraiment",
+                            "description": "Tu relies le chemin parcouru à une continuité concrète pour la suite.",
+                            "focus": "Intégrer"
+                        }
+                    ]
+                },
+                "who": "Pour celles qui ne veulent pas seulement se recentrer, mais transformer en profondeur leur manière de se choisir, d’agir et de se projeter.",
+                "goals": [
+                    "Traverser les schémas qui reviennent au lieu de les contourner.",
+                    "Clarifier une vision plus alignée pour les prochains mois.",
+                    "Mettre en mouvement des changements concrets et durables.",
+                    "Créer une continuité entre introspection, pratique et action."
+                ],
+                "includes": [
+                    "90 jours structurés en grandes étapes de transformation.",
+                    "Des exercices d’introspection, de régulation et de projection.",
+                    "Des bilans réguliers pour suivre les bascules et ajuster le cap.",
+                    "Un journal de transformation pour garder la mémoire du chemin."
+                ],
+                "prerequisites": [
+                    "Avoir déjà expérimenté un parcours plus court ou un travail personnel équivalent.",
+                    "Prévoir un engagement régulier sur plusieurs semaines.",
+                    "Choisir ce parcours pour une transformation réelle, pas pour une solution rapide."
+                ],
+                "outcomes": [
+                    "Une vision plus incarnée de ce que tu veux construire.",
+                    "Des schémas mieux compris et moins automatiques.",
+                    "Des décisions plus alignées avec ton énergie et tes valeurs.",
+                    "Une base solide pour continuer sur 12 mois."
+                ],
+                "outcomes_section": {
+                    "eyebrow": "Résultats",
+                    "title": "Ce que ALCHIMIE-90 vise à transformer dans la durée.",
+                    "description": "ALCHIMIE-90 est pensé comme un chemin long : comprendre les schémas, transformer les réponses habituelles et relier le travail intérieur à des choix concrets.",
+                    "items": [
+                        {
+                            "title": "Une vision plus incarnée",
+                            "description": "Tu relies ce que tu comprends à ce que tu veux construire dans les prochains mois."
+                        },
+                        {
+                            "title": "Des schémas mieux identifiés",
+                            "description": "Tu repères plus clairement ce qui se répète et les réponses que tu veux transformer."
+                        },
+                        {
+                            "title": "Des décisions plus alignées",
+                            "description": "Tu avances avec des choix plus cohérents avec ton énergie, tes limites et tes valeurs."
+                        },
+                        {
+                            "title": "Une base pour continuer sur 12 mois",
+                            "description": "Le parcours aide à prolonger la transformation sans la réduire à un déclic ponctuel."
+                        }
+                    ],
+                    "note": "Ce programme accompagne un travail personnel profond. Il ne remplace pas un cadre médical, psychologique ou thérapeutique si tu en as besoin."
+                },
+                "faq_section": {
+                    "eyebrow": "Questions fréquentes",
+                    "title": "Avant de t’engager dans ALCHIMIE-90",
+                    "description": "Les réponses pour évaluer si tu as l’espace, le rythme et l’envie d’entrer dans un parcours de transformation plus long."
+                },
+                "faq": [
+                    {
+                        "q": "Est-ce que je peux commencer directement par ALCHIMIE-90 ?",
+                        "a": "Ce sera possible si tu as déjà une base personnelle solide, mais un parcours court avant peut rendre l’expérience plus fluide."
+                    },
+                    {
+                        "q": "Quelle charge prévoir ?",
+                        "a": "Le parcours demandera plus de régularité qu’un format court, avec des temps de pratique et des bilans plus approfondis."
+                    },
+                    {
+                        "q": "Quand sera-t-il disponible ?",
+                        "a": "ALCHIMIE-90 est prévu comme parcours long après stabilisation des premiers programmes."
+                    }
+                ],
+                "final_cta": {
+                    "eyebrow": "Prochaine étape",
+                    "title": "Tu veux suivre l’ouverture d’ALCHIMIE-90 ?",
+                    "description": "Ce parcours demande plus d’espace et d’engagement. Tu peux demander à être prévenue ou choisir un programme plus court pour commencer.",
+                    "purchase_label": "Acheter ALCHIMIE-90",
+                    "free_label": "Commencer gratuitement",
+                    "unavailable_label": "Me prévenir",
+                    "secondary_label": "Comparer les programmes",
+                    "aside_title": "Une transformation profonde se prépare avec un cadre solide.",
+                    "aside_items": ["Évaluer ton énergie", "Avancer progressivement", "Choisir un engagement réaliste"]
+                }
+            }
+        }
+    ]
+}

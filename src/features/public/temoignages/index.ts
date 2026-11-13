@@ -1,0 +1,1 @@
+export { TemoignagesPage } from './TemoignagesPage';

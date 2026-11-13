@@ -1,0 +1,1 @@
+export { AdministrationCategoriesPage } from './AdministrationCategoriesPage';

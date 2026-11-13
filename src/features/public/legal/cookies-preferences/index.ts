@@ -1,0 +1,1 @@
+export { CookiesPreferencesPage } from './CookiesPreferencesPage';

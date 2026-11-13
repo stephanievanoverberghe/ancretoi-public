@@ -1,0 +1,1 @@
+export { AdministrationInspirationsPage } from './AdministrationInspirationsPage';

@@ -1,0 +1,1 @@
+export { ApprenantDetailPage } from './ApprenantDetailPage';

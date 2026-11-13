@@ -1,0 +1,9 @@
+export { HomeBenefits } from './HomeBenefits';
+export { HomeFaq } from './HomeFaq';
+export { HomeFinalCta } from './HomeFinalCta';
+export { HomeFounder } from './HomeFounder';
+export { HomeHero } from './HomeHero';
+export { HomeHowItWorks } from './HomeHowItWorks';
+export { HomeLearningExperience } from './HomeLearningExperience';
+export { HomeProgramTeasers } from './HomeProgramTeasers';
+export { HomeTrust } from './HomeTrust';

@@ -1,0 +1,1 @@
+export { AideArticlePage } from './AideArticlePage';

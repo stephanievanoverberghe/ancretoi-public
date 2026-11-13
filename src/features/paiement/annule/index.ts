@@ -1,0 +1,1 @@
+export { PaiementAnnulePage } from './PaiementAnnulePage';

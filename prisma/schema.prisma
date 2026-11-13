@@ -1,0 +1,492 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum UserRole {
+  USER
+  ADMIN
+}
+
+enum UserTheme {
+  SYSTEM
+  LIGHT
+  DARK
+}
+
+enum ProgramStatus {
+  DRAFT
+  PREFLIGHT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum ProgramLevel {
+  BASIQUE
+  CIBLE
+  PREMIUM
+}
+
+enum UnitType {
+  DAY
+}
+
+enum UnitStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum EnrollmentStatus {
+  ACTIVE
+  COMPLETED
+  PAUSED
+  CANCELED
+}
+
+enum BlogPostStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum InspirationStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum NewsletterStatus {
+  PENDING
+  CONFIRMED
+  UNSUBSCRIBED
+  BOUNCED
+  COMPLAINED
+}
+
+enum ResourceType {
+  ARTICLE
+  VIDEO
+  AUDIO
+  EXERCISE
+  TOOL
+}
+
+enum PurchaseStatus {
+  PENDING
+  PAID
+  CANCELED
+  REFUNDED
+}
+
+enum VideoProvider {
+  YOUTUBE
+  VIMEO
+  CLOUDINARY
+  UPLOADTHING
+  EXTERNAL
+}
+
+enum VideoAssetStatus {
+  DRAFT
+  READY
+  ARCHIVED
+}
+
+enum WebhookSource {
+  STRIPE
+}
+
+enum WebhookEventStatus {
+  PENDING
+  PROCESSED
+  FAILED
+}
+
+model User {
+  id                    String    @id @default(cuid())
+  email                 String    @unique
+  name                  String?
+  role                  UserRole  @default(USER)
+  passwordHash          String?
+  passwordChangedAt     DateTime?
+  emailVerifiedAt       DateTime?
+  deletedAt             DateTime?
+  suspendedAt           DateTime?
+  avatarUrl             String?
+  theme                 UserTheme @default(SYSTEM)
+  marketing             Boolean   @default(false)
+  productUpdates        Boolean   @default(true)
+  maxConcurrentPrograms Int?
+  features              String[]  @default([])
+  settings              Json?
+  metadata              Json?
+  lastLoginAt           DateTime?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  passwordResets PasswordReset[]
+  enrollments    Enrollment[]
+  dayStates      DayState[]
+  purchases      Purchase[]
+  consentLogs    ConsentLog[]
+
+  @@index([role])
+  @@index([deletedAt])
+  @@index([suspendedAt])
+}
+
+model Program {
+  id               String        @id @default(cuid())
+  slug             String        @unique
+  title            String
+  subtitle         String?
+  description      String?
+  coverUrl         String?
+  level            ProgramLevel?
+  status           ProgramStatus @default(DRAFT)
+  deletedAt        DateTime?
+  durationDays     Int           @default(7)
+  estMinutesPerDay Int           @default(20)
+  unitsCount       Int           @default(0)
+  category         String?
+  tags             String[]      @default([])
+  language         String        @default("fr")
+  hero             Json?
+  card             Json?
+  meta             Json?
+  marketing        Json?
+  highlights       Json?
+  curriculum       Json?
+  faq              Json?
+  seo              Json?
+  price            Json?
+  metadata         Json?
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  units       Unit[]
+  enrollments Enrollment[]
+  dayStates   DayState[]
+  products    Product[]
+  purchases   Purchase[]
+  videoAssets VideoAsset[]
+
+  @@index([status])
+  @@index([deletedAt])
+  @@index([level])
+}
+
+model Unit {
+  id                String     @id @default(cuid())
+  programSlug       String
+  unitType          UnitType   @default(DAY)
+  unitIndex         Int
+  title             String
+  durationMin       Int        @default(20)
+  mantra            String     @default("")
+  videoUrl          String     @default("")
+  contentParagraphs String[]   @default([])
+  content           Json?
+  journalSchema     Json?
+  validationSchema  Json?
+  status            UnitStatus @default(DRAFT)
+  createdAt         DateTime   @default(now())
+  updatedAt         DateTime   @updatedAt
+
+  program    Program     @relation(fields: [programSlug], references: [slug])
+  videoAsset VideoAsset?
+
+  @@unique([programSlug, unitType, unitIndex])
+  @@index([programSlug])
+  @@index([status])
+}
+
+model Enrollment {
+  id            String           @id @default(cuid())
+  userId        String
+  programSlug   String
+  status        EnrollmentStatus @default(ACTIVE)
+  startedAt     DateTime?
+  completedAt   DateTime?
+  currentDay    Int              @default(1)
+  introEngaged  Boolean          @default(false)
+  metadata      Json?
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+
+  user          User           @relation(fields: [userId], references: [id])
+  program       Program        @relation(fields: [programSlug], references: [slug])
+  dayStates     DayState[]
+  baselineScore BaselineScore?
+
+  @@unique([userId, programSlug])
+  @@index([programSlug])
+  @@index([status])
+}
+
+model DayState {
+  id            String    @id @default(cuid())
+  enrollmentId  String
+  userId        String
+  programSlug   String
+  dayIndex      Int
+  data          Json      @default("{}")
+  answers       Json?
+  practiced     Boolean   @default(false)
+  completed     Boolean   @default(false)
+  completedAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  enrollment Enrollment @relation(fields: [enrollmentId], references: [id])
+  user       User       @relation(fields: [userId], references: [id])
+  program    Program    @relation(fields: [programSlug], references: [slug])
+
+  @@unique([enrollmentId, dayIndex])
+  @@index([userId, programSlug, dayIndex])
+  @@index([programSlug])
+  @@index([completed])
+}
+
+model BaselineScore {
+  id            String   @id @default(cuid())
+  enrollmentId  String   @unique
+  j1Energie     Int?
+  j1Focus       Int?
+  j1Paix        Int?
+  j1Estime      Int?
+  j7Energie     Int?
+  j7Focus       Int?
+  j7Paix        Int?
+  j7Estime      Int?
+  metadata      Json?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  enrollment Enrollment @relation(fields: [enrollmentId], references: [id])
+}
+
+model Category {
+  id            String   @id @default(cuid())
+  name          String
+  slug          String   @unique
+  description   String   @default("")
+  color         String?
+  icon          String?
+  imagePath     String?
+  imageAlt      String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  posts BlogPost[]
+}
+
+model BlogPost {
+  id             String         @id @default(cuid())
+  title          String
+  slug           String         @unique
+  status         BlogPostStatus @default(DRAFT)
+  summary        String         @default("")
+  content        String         @default("")
+  coverPath      String         @default("")
+  coverAlt       String         @default("")
+  categoryId     String?
+  tags           String[]       @default([])
+  seoTitle       String         @default("")
+  seoDescription String         @default("")
+  canonicalUrl   String         @default("")
+  isFeatured     Boolean        @default(false)
+  readingTimeMin Int            @default(1)
+  publishedAt    DateTime?
+  authorEmail    String         @default("")
+  deletedAt      DateTime?
+  metadata       Json?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  category Category? @relation(fields: [categoryId], references: [id])
+
+  @@index([status])
+  @@index([categoryId])
+  @@index([publishedAt])
+  @@index([deletedAt])
+}
+
+model Inspiration {
+  id            String            @id @default(cuid())
+  title         String
+  slug          String            @unique
+  videoUrl      String
+  summary       String            @default("")
+  tags          String[]          @default([])
+  status        InspirationStatus @default(DRAFT)
+  publishedAt   DateTime?
+  curatorEmail  String?
+  deletedAt     DateTime?
+  metadata      Json?
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+
+  @@index([status])
+  @@index([publishedAt])
+  @@index([deletedAt])
+  @@index([curatorEmail])
+}
+
+model PasswordReset {
+  id            String    @id @default(cuid())
+  userId        String
+  tokenHash     String    @unique
+  expiresAt     DateTime
+  usedAt        DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model NewsletterSubscriber {
+  id             String           @id @default(cuid())
+  email          String           @unique
+  status         NewsletterStatus @default(PENDING)
+  source         String?
+  tags           String[]         @default([])
+  confirmToken   String?          @unique
+  unsubToken     String?          @unique
+  consentAt      DateTime?
+  confirmedAt    DateTime?
+  unsubscribedAt DateTime?
+  meta           Json?
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+
+  @@index([status])
+}
+
+model Resource {
+  id            String       @id @default(cuid())
+  slug          String       @unique
+  title         String
+  type          ResourceType
+  description   String?
+  minutes       Int?
+  tags          String[]     @default([])
+  coverUrl      String?
+  url           String?
+  metadata      Json?
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+
+  @@index([type])
+}
+
+model Product {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  programSlug   String?
+  name          String
+  amountCents   Int
+  currency      String   @default("EUR")
+  stripePriceId String?  @unique
+  active        Boolean  @default(true)
+  metadata      Json?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  program   Program?   @relation(fields: [programSlug], references: [slug])
+  purchases Purchase[]
+
+  @@index([programSlug])
+  @@index([active])
+}
+
+model Purchase {
+  id                    String         @id @default(cuid())
+  userId                String
+  productId             String?
+  programSlug           String?
+  stripeSessionId       String?        @unique
+  stripePaymentIntentId String?        @unique
+  amountCents           Int?
+  currency              String?
+  status                PurchaseStatus @default(PENDING)
+  metadata              Json?
+  createdAt             DateTime       @default(now())
+  updatedAt             DateTime       @updatedAt
+
+  user    User     @relation(fields: [userId], references: [id])
+  product Product? @relation(fields: [productId], references: [id])
+  program Program? @relation(fields: [programSlug], references: [slug])
+
+  @@index([userId])
+  @@index([productId])
+  @@index([programSlug])
+  @@index([status])
+}
+
+model VideoAsset {
+  id            String           @id @default(cuid())
+  programSlug   String?
+  unitId        String?          @unique
+  provider      VideoProvider    @default(EXTERNAL)
+  videoId       String?
+  sourceUrl     String?
+  posterUrl     String?
+  captionsUrl   String?
+  chaptersUrl   String?
+  transcriptUrl String?
+  status        VideoAssetStatus @default(DRAFT)
+  metadata      Json?
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+
+  program Program? @relation(fields: [programSlug], references: [slug])
+  unit    Unit?    @relation(fields: [unitId], references: [id])
+
+  @@index([programSlug])
+  @@index([provider])
+  @@index([status])
+}
+
+model ConsentLog {
+  id         String   @id @default(cuid())
+  userId     String?
+  type       String
+  version    String
+  acceptedAt DateTime @default(now())
+  ip         String?
+  userAgent  String?
+  choices    Json?
+  metadata   Json?
+
+  user User? @relation(fields: [userId], references: [id])
+
+  @@index([userId])
+  @@index([type])
+  @@index([acceptedAt])
+}
+
+model WebhookEvent {
+  id          String             @id @default(cuid())
+  source      WebhookSource      @default(STRIPE)
+  eventId     String             @unique
+  type        String
+  payload     Json
+  status      WebhookEventStatus @default(PENDING)
+  processedAt DateTime?
+  error       String?
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+
+  @@index([source])
+  @@index([type])
+  @@index([status])
+}

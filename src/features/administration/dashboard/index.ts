@@ -1,0 +1,1 @@
+export { AdministrationDashboardPage } from './AdministrationDashboardPage';

@@ -1,0 +1,45 @@
+export const blogContent = {
+    hero: {
+        eyebrow: 'Le blog',
+        title: 'Des articles pour respirer, clarifier et avancer.',
+        description: 'Des textes courts et concrets, dans l’esprit de la méthode : revenir au corps, y voir clair et transformer en douceur.',
+        exploreCta: 'Explorer les articles',
+        featuredLabel: 'À la une',
+        featuredCta: 'Lire l’article',
+    },
+    toolbar: {
+        searchPlaceholder: 'Rechercher un article…',
+        searchAriaLabel: 'Rechercher un article',
+        clearSearchLabel: 'Effacer la recherche',
+        categoryLabel: 'Catégorie',
+        categoryAll: 'Toutes les catégories',
+        tagLabel: 'Tag',
+        tagAll: 'Tous les tags',
+        sortLabel: 'Trier',
+        sortOptions: {
+            recent: 'Récents',
+            alphaAsc: 'A → Z',
+            alphaDesc: 'Z → A',
+            short: 'Lecture la plus courte',
+            long: 'Lecture la plus longue',
+        },
+    },
+    card: {
+        readCta: 'Lire l’article',
+        untitled: 'Sans titre',
+        coverAltFallback: 'Image de couverture de l’article',
+    },
+    empty: {
+        noPosts: 'Les premiers articles arrivent bientôt.',
+        noResults: 'Aucun article ne correspond à ces filtres.',
+    },
+    article: {
+        backLabel: 'Tous les articles',
+        shareLabel: 'Partager',
+        shareCopied: 'Lien copié',
+        tocTitle: 'Sommaire',
+        prevLabel: 'Article précédent',
+        nextLabel: 'Article suivant',
+        readingTimeSuffix: 'min de lecture',
+    },
+} as const;

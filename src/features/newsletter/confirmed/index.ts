@@ -1,0 +1,1 @@
+export { NewsletterConfirmedPage } from './NewsletterConfirmedPage';

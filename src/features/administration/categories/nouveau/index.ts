@@ -1,0 +1,1 @@
+export { NouvelleCategoriePage } from './NouvelleCategoriePage';

@@ -1,0 +1,1 @@
+export { ArticlesArchivesPage } from './ArticlesArchivesPage';
